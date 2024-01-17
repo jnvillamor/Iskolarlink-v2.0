@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div>Hello World</div> 
+    <div className="backgroundGradient1">Hello World</div> 
   )
 }
 

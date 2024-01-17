@@ -4,7 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        
+        border: 'var(--border)',
+        background: 'var(--background)',
+        primary: 'var(--primary-50)',
+        neutrals: {
+          DEFAULT: 'var(--neutrals-50)',
+          100: 'var(--neutrals-100)',
+        }
       },
       fontFamily: {
         "Inter": ["Inter", "sans-serif"],
