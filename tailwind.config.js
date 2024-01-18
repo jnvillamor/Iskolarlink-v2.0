@@ -21,10 +21,12 @@ module.exports = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           50: 'hsl(var(--primary-50))',
+          100: 'hsl(var(--primary-100))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--neutral-50))',
-          100: 'hsl(var(--neutral-100))'
+          100: 'hsl(var(--neutral-100))',
+          200: 'hsl(var(--neutral-200))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',

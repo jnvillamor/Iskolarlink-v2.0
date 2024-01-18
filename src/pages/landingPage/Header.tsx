@@ -1,11 +1,28 @@
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  useEffect(() => {});
+
   return (
-    <nav className='sticky top-0 py-6 bg-white w-full bg-transparent'>
-      <div className='bg-transparent flex justify-between items-end lg:mx-16 mx-4'>
+    <nav className={`sticky top-0 py-6 w-full ${isScrolled ? 'bg-white' : 'bg-transparent'} z-10 2xl:px-32 lg:px-16 px-6`}>
+      <div className='flex justify-between items-end'>
         <div>
           <Link to={'/'}>
             <img src='/logo-red.svg' alt='logo' className='inline h-7 lg:h-full' />
