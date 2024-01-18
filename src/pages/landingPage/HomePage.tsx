@@ -92,7 +92,7 @@ const Section3 = () => {
 const Section4 = () => {
   return (
     <div className='pt-20 pb-[160px] px-6 lg:px-16 2xl:px-32'>
-      <div className='w-1/2 mx-auto text-center mb-16'>
+      <div className='w-full md:w-1/2 mx-auto text-center mb-16'>
         <h1 className='text-center textGradient2 mb-6'>
           Find Latest <br /> Opportunities
         </h1>
