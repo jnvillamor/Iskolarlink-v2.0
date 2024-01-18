@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <nav className='fixed w-full bg-transparent'>
-      <div className='bg-transparent flex justify-between items-end mt-6 lg:mx-16 mx-4'>
+    <nav className='sticky top-0 py-6 bg-white w-full bg-transparent'>
+      <div className='bg-transparent flex justify-between items-end lg:mx-16 mx-4'>
         <div>
           <Link to={'/'}>
             <img src='/logo-red.svg' alt='logo' className='inline h-7 lg:h-full' />
