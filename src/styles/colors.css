@@ -1,15 +1,19 @@
-@layer base { 
-  :root { 
-    --primary-50: hsla(1, 51%, 21%, 1); 
+@layer base {
+  :root {
+    --primary: 1, 51%, 21%;
+    --primary-50: 2, 59%, 41%;
 
-    --neutrals-50: hsla(0, 0%, 39%, 1);
-    --neturals-100: hsla(0, 0%, 58%, 1);
+    --neutral-50: 0, 0%, 39%;
+    --netural-100: 0, 0%, 58%;
 
     --background: hsla(0, 0%, 58%, 0.15);
-    --background-gradient-1: linear-gradient(90deg, #A6302B 0%, #501B1A 100.27%);
-    --background-gradient-2: linear-gradient(to bottom right, #A72F2B 0%, #501B1A 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #A72F2B 0%, #501B1A 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #A72F2B 0%, #501B1A 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #A72F2B 0%, #501B1A 50%) top right / 50% 50% no-repeat;
+    --background-gradient-1: linear-gradient(90deg, #a6302b 0%, #501b1a 100.27%);
+    --background-gradient-2: linear-gradient(to bottom right, #a72f2b 0%, #501b1a 50%) bottom right / 50% 50% no-repeat,
+      linear-gradient(to bottom left, #a72f2b 0%, #501b1a 50%) bottom left / 50% 50% no-repeat,
+      linear-gradient(to top left, #a72f2b 0%, #501b1a 50%) top left / 50% 50% no-repeat,
+      linear-gradient(to top right, #a72f2b 0%, #501b1a 50%) top right / 50% 50% no-repeat;
 
-    --border: hsla(0, 15%, 87%, 1);
+    --border: 0, 15%, 87%;
   }
 
   .backgroundGradient1 {
@@ -19,4 +23,4 @@
   .backgroundGradient2 {
     background: var(--background-gradient-2);
   }
-} 
+}
