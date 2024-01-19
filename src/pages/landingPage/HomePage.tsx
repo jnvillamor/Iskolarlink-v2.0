@@ -29,7 +29,7 @@ const Section1 = () => {
 const Section2 = () => {
   return (
     <div className='my-[120px] flex flex-col gap-[80px] md:gap-[160px] 2xl:px-32 lg:px-16 px-6'>
-      <div className='mx-auto text-center lg:w-3/5'>
+      <div className='mx-auto text-center lg:w-4/5'>
         <h1 className='mb-6 textGradient1'>
           Explore the <br /> Newest Pathways
         </h1>
@@ -73,7 +73,7 @@ const Section2 = () => {
 const Section3 = () => {
   return (
     <div className='py-24 2xl:px-32 lg:px-16 px-6 flex justify-center items-center gap-6 bg-primary text-secondary-200'>
-      <div className='hidden lg:block lg:w-1/3'>
+      <div className='hidden md:block lg:w-1/3'>
         <img src='/images/homepage-section-hero-3.svg' alt='hero' className='w-full' />
       </div>
       <div className='w-full text-center lg:text-left lg:w-2/3 py-6'>
