@@ -1,5 +1,11 @@
 import { Button } from '@/components/ui/button';
 import Header from './Header';
+import { useEffect, useState } from 'react';
+import { Internship } from '@/models/models';
+import { getFeaturedInternships } from '@/data/data';
+import DataCard from '@/components/DataCard';
+import { Link } from 'react-router-dom';
+import { Separator } from '@/components/ui/separator';
 
 const Section1 = () => {
   return (
@@ -90,6 +96,21 @@ const Section3 = () => {
 };
 
 const Section4 = () => {
+  const [internships, setInternships] = useState<Internship[]>([]);
+
+  useEffect(() => {
+    const fetchFeauturedInternships = async () => {
+      const res = await getFeaturedInternships();
+      const transformData: Internship[] = res.data.map((internship) => ({
+        ...internship,
+        compensation: internship.compensation as 'Paid' | 'Unpaid'
+      }));
+
+      setInternships(transformData);
+    };
+    fetchFeauturedInternships();
+  }, []);
+
   return (
     <div className='pt-20 pb-[160px] px-6 lg:px-16 2xl:px-32'>
       <div className='w-full md:w-1/2 mx-auto text-center mb-16'>
@@ -101,7 +122,38 @@ const Section4 = () => {
           rewarding career journey.
         </p>
       </div>
-      <div className='border'></div>
+      <div className='flex flex-wrap justify-center gap-6'>
+        {internships.map((internship) => (
+          <DataCard key={internship.id} {...internship} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className='pt-24 pb-10 bg-primary text-white'>
+      <h1 className='text-center mb-12 md:w-2/3 lg:3/5 mx-auto'>
+        Launch Your Future: Apply Today!
+      </h1>
+      <div className='w-fit mx-auto flex flex-col md:flex-row gap-1 md:gap-6'>
+        <div className='flex items-center gap-2'>
+          <Link to='/'>
+            <img src='/icons/facebook.svg' alt='facebook' className='w-5 md:w-9 aspect-square' />
+          </Link>
+          <span>Iskolarlink</span>
+        </div>
+        <div>
+          <Separator orientation='vertical' className='bg-white w-[2px]' decorative={true} />
+        </div>
+        <div className='flex items-center gap-2'>
+          <Link to='/'>
+            <img src='/icons/linked-in.svg' alt='facebook' className='w-5 md:w-9 aspect-square' />
+          </Link>
+          <span>Iskolarlink</span>
+        </div>
+      </div>
     </div>
   );
 };
@@ -114,6 +166,7 @@ const HomePageComponent = () => {
       <Section2 />
       <Section3 />
       <Section4 />
+      <Footer />
     </main>
   );
 };

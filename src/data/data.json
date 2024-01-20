@@ -13,12 +13,13 @@
     "featured": true
   },
   {
+    "id": 2,
     "image": "/images/data-logo-2.svg",
     "title": "Data Science Intern",
     "company": "InnovateTech Solutions Inc.",
     "location": "Silicon Valley, California, USA",
     "role": "Data Science",
-    "work_setup": "Python",
+    "work_setup": "Onsite",
     "compensation": "Paid",
     "rate": "240/hr",
     "description": "Join InnovateTech Solutions Inc. as a Data Science Intern and immerse yourself in the world of cutting-edge technology and innovation. As a part of our dynamic team in the heart of Silicon Valley, you will have the opportunity to work on impactful data science projects, leveraging your skills in Python and machine learning.\n\nWhat you'll be doing:\n- Collaborating with our experienced data science team on real-world projects\n- Applying Python programming skills to analyze and interpret data\n- Building and implementing machine learning models\n- Contributing to the development of data-driven solutions\n- Participating in data exploration and visualization\n\nWho we're looking for:\n- Enthusiastic individuals with a passion for data science\n- Students or recent graduates in computer science, data science, or a related field\n- Proficiency in Python programming and machine learning concepts\n- Strong analytical and problem-solving skills\n\nThis is a paid internship position with a competitive compensation of $240 per hour. If you are ready to take on the challenges of data science and contribute to groundbreaking projects, apply now and be a key player in shaping the future of data innovation at InnovateTech Solutions Inc.",
