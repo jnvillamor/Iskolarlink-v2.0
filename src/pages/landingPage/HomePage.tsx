@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import Header from './Header';
+import Header from '../../components/Header';
 import { useEffect, useState } from 'react';
 import { Internship } from '@/models/models';
 import { getFeaturedInternships } from '@/data/data';

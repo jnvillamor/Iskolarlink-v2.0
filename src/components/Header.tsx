@@ -35,7 +35,7 @@ const Header = () => {
           <Link to={'/'} className='hover:underline hover:text-black'>
             About
           </Link>
-          <Link to={'/'} className='hover:underline hover:text-black'>
+          <Link to={'/listing'} className='hover:underline hover:text-black'>
             Listing
           </Link>
           <Link to={'/'} className='hover:underline hover:text-black'>
